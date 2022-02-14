@@ -1,29 +1,22 @@
-import React, { useCallback } from "react-router-dom";
+import React, { useCallback } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-function NavLink(props) {
-  if (!props.route)
-    return new Error("NavLink was created with undefined route");
-
+export default function NavLink({ setOpen, routeLink="/", className="nav-link", route }) {
   const updateOpen = useCallback(
     (event) => {
       setOpen(false);
     },
     [setOpen]
   );
-
+  
   return (
     <Link
-      to={props.routeLink}
+      to={routeLink}
       className={className}
-      onClick={() => this.props.setOpen(false)}
+      onClick={() => updateOpen}
     >
-      {props.route}
+      {route}
     </Link>
   );
 }
-
-NavLink.defaultProps = {
-  routeLink: "/",
-  className: "nav-link",
-};
-export default NavLink;

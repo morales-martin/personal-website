@@ -1,7 +1,7 @@
 import {React, useState} from "react";
-import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FiMenu, FiX } from "react-icons/fi";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
 
@@ -9,40 +9,21 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-logo" onClick={() => setOpen(false)}>
-        Logo
-      </Link>
+      NavLink
       <ul className={open ? "nav-links active" : "nav-links"}>
         <li className="nav-item">
-          <Link to="/" className="nav-link" onClick={() => setOpen(false)}>
-            Home
-          </Link>
+          <NavLink route="Home" setOpen={setOpen} />
         </li>
         <li className="nav-item">
-          <Link to="/about" className="nav-link" onClick={() => setOpen(false)}>
-            About
-          </Link>
+          <NavLink route="About" routeLink="/about" updateOpen={setOpen} />
         </li>
         <li className="nav-item">
-          <Link
-            to="/contact"
-            className="nav-link"
-            onClick={() => setOpen(false)}
-          >
-            Contact
-          </Link>
+        <NavLink route="Contact" routeLink="/contact" updateOpen={setOpen} />
         </li>
         <li className="nav-item">
-          <Link
-            to="/gallery"
-            className="nav-link"
-            onClick={() => setOpen(false)}
-          >
-            Gallery
-          </Link>
+        <NavLink route="Gallery" routeLink="/gallery" updateOpen={setOpen} />
         </li>
       </ul>
-
       <div onClick={() => setOpen(!open)} className="nav-icon">
         {open ? <FiX /> : <FiMenu />}
       </div>
