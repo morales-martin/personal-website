@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  font-size: 1rem;
+  overflow-y: hidden;
+  overflow-x:visible;
+}
+
+.backdrop {
+  color: rgba(var(--ternary-rgb), 0.2);
+  font-size:medium;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+.center {
+  align-self: center;
+}
+
+.top {
+  align-self: top;
+}
+
+.content {
+  position: absolute;
+  align-self: center;
+  color: var(--secondary);
+  width: 100%;
+}
+
+.text {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.highlight {
+  color: var(--ternary);
+  font-weight: bold;
+}

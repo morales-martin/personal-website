@@ -10,6 +10,8 @@ import Landing from "./components/Landing";
 import Summary from "./components/Summary";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,10 +49,12 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={`container ${styles.container}`} ref={container}>
+          <Header />
           <Landing className={`panel ${styles.landing}`} />
           <Summary className={`panel ${styles.summary}`} />
           <Projects className={`panel ${styles.projects}`} />
           <Contact className={`panel ${styles.contact}`} />
+          <Footer />
         </div>
       </main>
     </>

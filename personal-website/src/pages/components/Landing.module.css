@@ -1,0 +1,39 @@
+.landingContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.content {
+  width: fit-content;
+}
+
+.header {
+  font-size: 55px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.titles {
+  font-weight: bold;
+  font-size: 44px;
+  color: var(--ternary);
+}
+
+.summary {
+  width: 30rem;
+  color: var(--secondary);
+}
+
+.resumeButton {
+  margin-top: 1rem;
+}
+
+.arrow {
+  color: var(--secondary);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-right: 1rem;
+  transform: scale(3);
+}
