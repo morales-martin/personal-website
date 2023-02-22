@@ -16,7 +16,11 @@ function Landing({ className }) {
           accessible, sustainable human-centered products with a new team.
         </div>
         <div className={styles.resumeButton}>
-          <Button text={"Check out my resume"} />
+          <Button
+            text={"Check out my resume"}
+            href="/Martin Morales - Software Engineering Resume 2023.docx.pdf"
+            download={true}
+          />
         </div>
       </div>
       <div className={styles.arrow}>

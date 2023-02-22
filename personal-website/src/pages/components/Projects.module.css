@@ -1,7 +1,14 @@
 .projectsContainer {
-    display: flex;
-    margin: auto;
-    /* justify-content: center; */
-    flex-direction: column;
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.scrollContainer {
+    align-self: center;
+  height: max-content;
+  overflow: scroll;
+  /* position: absolute; */
+  /* overflow: visible; */
+  width: 70%;
 }

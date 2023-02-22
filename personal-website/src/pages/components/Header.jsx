@@ -8,7 +8,11 @@ function Header() {
         <div className={styles.line}></div>
         <div className={styles.lineBottomSpace}></div>
       </div>
-      <div className={styles.content}>morales-martin@outlook.com</div>
+      <div className={styles.content}>
+        <a href="mailto:morales-martin@outlook.com?subject=Hello from a visitor!">
+          morales-martin@outlook.com
+        </a>
+      </div>
     </div>
   );
 }

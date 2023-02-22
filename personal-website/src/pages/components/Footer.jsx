@@ -9,9 +9,30 @@ function Footer() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.socialIcon}><GitHubIcon /></div>
-        <div className={styles.socialIcon}><LinkedInIcon /></div>
-        <div className={styles.socialIcon}><InstagramIcon /></div>
+        <a
+          href="https://github.com/morales-martin"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.socialIcon}
+        >
+          <GitHubIcon />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/morales-martin24/"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.socialIcon}
+        >
+          <LinkedInIcon />
+        </a>
+        <a
+          href="https://www.instagram.com/moramart_/"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.socialIcon}
+        >
+          <InstagramIcon />
+        </a>
       </div>
       <div className={styles.lineContainer}>
         <div className={styles.line}></div>

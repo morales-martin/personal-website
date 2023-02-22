@@ -23,7 +23,7 @@ html {
   height: 100%;
   -webkit-overflow-scrolling: touch;
   background-color: var(--primary);
-  font-family: Lora !important; 
+  font-family: Lora !important;
 }
 body {
   overflow-y: visible;
@@ -35,6 +35,11 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: Lora;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -10,8 +10,17 @@ const StyledMuiButton = styled(MuiButton)(() => ({
   },
 }));
 
-function Button({ text }) {
-  return <StyledMuiButton variant="outlined">{text}</StyledMuiButton>;
+function Button({ text, href = "", target = "_blank", download = false }) {
+  return (
+    <StyledMuiButton
+      variant="outlined"
+      href={href}
+      target={target}
+      download={download}
+    >
+      {text}
+    </StyledMuiButton>
+  );
 }
 
 export default Button;

@@ -1,6 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Project.module.css";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
+import { styled } from "@mui/system";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
+
+const StyledChip = styled(Chip)(() => ({
+  color: "var(--secondary)",
+  border: "1px var(--secondary) solid",
+}));
 
 function Project({
   projectTitle,
@@ -10,6 +20,8 @@ function Project({
   className = "",
   desktopImgUrl = "",
   mobileImgUrl = "",
+  githubLink = "",
+  prodLink = "",
 }) {
   return (
     <div className={`${className} ${styles.projectContainer}`}>
@@ -17,27 +29,58 @@ function Project({
         <div className={styles.header}>{projectTitle}</div>
         <div className={styles.titles}>{roles.join(" - ")}</div>
         <div className={styles.summary}>{description}</div>
-        {/* <div className={styles.resumeButton}>
-          <Button text={"Check out my resume"} />
-        </div> */}
+        <div className={styles.technologies}>
+          <Stack direction="row" spacing={1}>
+            {chips.map((chip) => (
+              <StyledChip
+                size="small"
+                key={chip}
+                label={chip}
+                variant="outlined"
+              />
+            ))}
+          </Stack>
+        </div>
+        <div className={styles.links}>
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.icon}
+          >
+            <GitHubIcon />
+          </a>
+          <a
+            href={prodLink}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.icon}
+          >
+            <LaunchIcon />
+          </a>
+        </div>
       </div>
       <div className={styles.projectImages}>
-        <div className={styles.desktopContainer}>
-          <Image
-            alt="desktop image"
-            src={desktopImgUrl}
-            fill
-            // placeholder="blur"
-          />
-        </div>
-        <div className={styles.mobileContainer}>
-          <Image
-            alt="mobile image"
-            src={mobileImgUrl}
-            fill
-            // placeholder="blur"
-          />
-        </div>
+        {desktopImgUrl && (
+          <div className={styles.desktopContainer}>
+            <Image
+              alt="desktop image"
+              src={desktopImgUrl}
+              fill
+              // placeholder="blur"
+            />
+          </div>
+        )}
+        {mobileImgUrl && (
+          <div className={styles.mobileContainer}>
+            <Image
+              alt="mobile image"
+              src={mobileImgUrl}
+              fill
+              // placeholder="blur"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
