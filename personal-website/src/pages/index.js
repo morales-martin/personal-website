@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Inter } from "@next/font/google";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+const ScrollTrigger = require("gsap/ScrollTrigger");
 
 import styles from "@/styles/Home.module.css";
 
@@ -19,7 +19,7 @@ export default function Home() {
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       let sections = gsap.utils.toArray(".panel");
 
