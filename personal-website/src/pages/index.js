@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useEffect, useRef } from "react";
 import { Inter } from "@next/font/google";
 import { gsap } from "gsap";
-const ScrollTrigger = require("gsap/ScrollTrigger");
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import styles from "@/styles/Home.module.css";
 
@@ -30,7 +30,7 @@ export default function Home() {
           trigger: container.current,
           pin: true,
           scrub: 1,
-          snap: 1 / (sections.length - 1),
+          // snap: 1 / (sections.length - 1),
           end: () => "+=" + container.current.offsetWidth,
         },
       });
