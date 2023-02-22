@@ -13,7 +13,11 @@ function Contact({ className }) {
           create your next idea together !
         </div>
         <div className={styles.resumeButton}>
-          <Button text={"Say Hello"} />
+          <Button
+            href="mailto:morales-martin@outlook.com?subject=Hello from a visitor!"
+            target="_blank"
+            text={"Say Hello"}
+          />
         </div>
       </div>
     </div>

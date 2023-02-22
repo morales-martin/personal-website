@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Project from "./Project";
 import styles from "./Projects.module.css";
 
 function Projects({ className }) {
-  const projects = [
+  const [projects, setProjects] = useState([
     {
       title: "To Do - Task Manager",
       roles: ["Full Stack Engineer", "UI Designer"],
@@ -16,7 +16,7 @@ function Projects({ className }) {
         "AWS AppSync",
         "AWS Amplify",
         "AWS DynamoDB",
-        "GraphQL",
+        "GraphQL API",
         "NextAuth.js",
         "MaterialUI",
       ],
@@ -36,7 +36,7 @@ function Projects({ className }) {
         "AWS Lambda",
         "MongoDB",
         "Express.js",
-        "REST",
+        "REST API",
         "Axios",
       ],
       githubLink: "https://github.com/morales-martin/Chord-Search",
@@ -50,11 +50,11 @@ function Projects({ className }) {
         "Web-based search platform using React, simplifying the search experience for Airbnb listings. Features include selecting multiple listings and sharing them with multiple email addresses.",
       desktop: "/quickbnb_desktop.png",
       mobile: "",
-      chips: ["React.js", "Emailjs", "Vercel"],
+      chips: ["React.js", "Emailjs", "Vercel", "REST API"],
       githubLink: "https://github.com/morales-martin/Simple-Airbnb-Search",
       prodLink: "https://simple-airbnb-search-wcxi.vercel.app/",
     },
-  ];
+  ]);
 
   return (
     <div className={`${className} ${styles.projectsContainer}`}>

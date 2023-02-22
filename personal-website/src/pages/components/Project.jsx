@@ -10,6 +10,7 @@ import LaunchIcon from "@mui/icons-material/Launch";
 const StyledChip = styled(Chip)(() => ({
   color: "var(--secondary)",
   border: "1px var(--secondary) solid",
+  margin: "0.25rem 0.25rem 0.25rem 0",
 }));
 
 function Project({
@@ -30,16 +31,14 @@ function Project({
         <div className={styles.titles}>{roles.join(" - ")}</div>
         <div className={styles.summary}>{description}</div>
         <div className={styles.technologies}>
-          <Stack direction="row" spacing={1}>
-            {chips.map((chip) => (
-              <StyledChip
-                size="small"
-                key={chip}
-                label={chip}
-                variant="outlined"
-              />
-            ))}
-          </Stack>
+          {chips.map((chip) => (
+            <StyledChip
+              size="small"
+              key={chip}
+              label={chip}
+              variant="outlined"
+            />
+          ))}
         </div>
         <div className={styles.links}>
           <a
