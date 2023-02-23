@@ -57,7 +57,7 @@ function Projects({ className }) {
   ]);
 
   return (
-    <div className={`${className} ${styles.projectsContainer}`}>
+    <div id="projects" className={`${className} ${styles.projectsContainer}`}>
       <div className={styles.scrollContainer}>
         {projects.map((project) => (
           <Project

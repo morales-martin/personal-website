@@ -1,0 +1,39 @@
+.navbarContainer {
+  position: absolute;
+  align-self: center;
+  display: flex;
+
+  height: 60vh;
+  bottom: 0;
+  z-index: 3;
+
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  justify-content: flex-end;
+}
+
+.navbarLink {
+  font-size: large;
+  color: var(--secondary);
+  margin: 1rem;
+}
+
+.navbarLink:hover {
+  color: var(--ternary);
+  cursor: pointer;
+}
+
+.lineContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.line {
+  border-right: 0.13rem var(--secondary) solid;
+  flex: 1;
+}
+
+.lineBottomSpace {
+  flex: 1;
+}

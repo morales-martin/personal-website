@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 
 function Contact({ className }) {
   return (
-    <div className={`${className} ${styles.contactContainer}`}>
+    <div id="contact" className={`${className} ${styles.contactContainer}`}>
       <div className={styles.content}>
         <div className={styles.header}>Get In Touch</div>
         <div className={styles.summary}>

@@ -72,11 +72,11 @@
 .icon svg {
   margin: 1rem 1rem 0 0;
   font-size:2rem;
-  color: var(--ternary);
+  color: var(--secondary);
 }
 
 .icon svg:hover {
-  color: var(--secondary);
+  color: var(--ternary);
 }
 /* .resumeButton {
     margin-top: 1rem;

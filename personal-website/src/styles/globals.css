@@ -35,11 +35,28 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: Lora;
+
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: var(--secondary) var(--primary); /* scroll thumb and track */
 }
 
 a {
   text-decoration: none;
   color: var(--secondary);
+}
+
+body::-webkit-scrollbar {
+  width: 9px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--primary); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid var(--primary); /* creates padding around scroll thumb */
 }
 
 @media (prefers-color-scheme: dark) {

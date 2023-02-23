@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { Inter } from "@next/font/google";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 
 import styles from "@/styles/Home.module.css";
 
@@ -12,18 +13,19 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const container = useRef(null);
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       let sections = gsap.utils.toArray(".panel");
 
-      gsap.to(sections, {
+      let horizontalScroll = gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
@@ -34,10 +36,45 @@ export default function Home() {
           end: () => "+=" + container.current.offsetWidth,
         },
       });
+
+      /* Main navigation */
+      document.querySelectorAll(".navLink").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          let targetElem = document.querySelector(
+              e.target.getAttribute("href")
+            ),
+            y = targetElem;
+          if (
+            targetElem &&
+            container.current.isSameNode(targetElem.parentElement)
+          ) {
+            let totalScroll =
+                horizontalScroll.scrollTrigger.end -
+                horizontalScroll.scrollTrigger.start,
+              totalMovement = (sections.length - 1) * targetElem.offsetWidth;
+            y = Math.round(
+              horizontalScroll.scrollTrigger.start +
+                (targetElem.offsetLeft / totalMovement) * totalScroll
+            );
+          }
+          gsap.to(window, {
+            scrollTo: {
+              y: y,
+              autoKill: false,
+            },
+            duration: 1,
+          });
+        });
+      });
     }, container.current); // <- Scope!
 
     return () => ctx.revert();
   }, []);
+
+  const navLinkHandler = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -50,6 +87,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={`container ${styles.container}`} ref={container}>
           <Header />
+          <Navbar clickHandler={navLinkHandler} />
           <Landing className={`panel ${styles.landing}`} />
           <Summary className={`panel ${styles.summary}`} />
           <Projects className={`panel ${styles.projects}`} />

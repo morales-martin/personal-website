@@ -3,19 +3,21 @@ import styles from "./Summary.module.css";
 
 function Summary({ className }) {
   return (
-    <div className={`${className} ${styles.container}`}>
+    <div id="about" className={`${className} ${styles.container}`}>
       <div className={styles.content}>
         <div className={styles.text}>
           <p>
             I am a highly skilled and passionate software engineer with
             expertise in creating web applications using{" "}
             <span className={styles.highlight}>JavaScript</span>,{" "}
-            <span className={styles.highlight}>SQL</span>,{" "}
-            <span className={styles.highlight}>React.js</span>, and{" "}
+            <span className={styles.highlight}>React.js</span>,{" "}
+            <span className={styles.highlight}>Express.js</span> and{" "}
             <span className={styles.highlight}>Node.js</span>. My technical
             proficiency also includes experience in databases such as{" "}
             <span className={styles.highlight}>MongoDB</span>
-            and <span className={styles.highlight}>MS SQL</span>, as well as
+            and <span className={styles.highlight}>SQL</span>, using{" "}
+            <span className={styles.highlight}>REST</span> and{" "}
+            <span className={styles.highlight}>GraphQL APIs</span> as well as
             cloud computing platforms like{" "}
             <span className={styles.highlight}>Amazon Web Services (AWS)</span>.
           </p>
@@ -26,12 +28,15 @@ function Summary({ className }) {
             solutions that meet the unique needs of users. My passion for
             software engineering drives me to{" "}
             <span className={styles.highlight}>continuously learn</span> and
-            implement new technologies, staying up-to-date with the latest
-            trends in the field.
+            implement new technologies, staying up-to-date with the{" "}
+            <span className={styles.highlight}>latest trends</span> in the
+            field.
           </p>
           <p>
-            I am excited to use my skills to build <span className={styles.highlight}>cutting-edge</span> web applications
-            and make a positive impact in the world of software engineering.
+            I am excited to use my skills to build{" "}
+            <span className={styles.highlight}>cutting-edge</span> web
+            applications and make a positive impact in the world of software
+            engineering.
           </p>
         </div>
       </div>

@@ -8,7 +8,19 @@
     align-self: center;
   height: max-content;
   overflow: scroll;
-  /* position: absolute; */
-  /* overflow: visible; */
   width: 70%;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 9px; /* width of the entire scrollbar */
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: var(--primary); /* color of the tracking area */
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background-color: var(--secondary); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid var(--primary); /* creates padding around scroll thumb */
 }
