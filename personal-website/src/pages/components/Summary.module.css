@@ -41,3 +41,21 @@
   color: var(--ternary);
   font-weight: bold;
 }
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .container {
+    font-size: small;
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  .text {
+    width: 80%;
+    text-align: justify;
+  }
+
+  .backdrop {
+    font-size: small;
+  }
+}

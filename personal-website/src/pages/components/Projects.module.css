@@ -5,10 +5,11 @@
 }
 
 .scrollContainer {
-    align-self: center;
+  align-self: center;
   height: max-content;
-  overflow: scroll;
-  width: 70%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 80%;
 }
 
 .scrollContainer::-webkit-scrollbar {
@@ -23,4 +24,11 @@
   background-color: var(--secondary); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid var(--primary); /* creates padding around scroll thumb */
+}
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .scrollContainer {
+    margin-top: 5rem;
+  }
 }

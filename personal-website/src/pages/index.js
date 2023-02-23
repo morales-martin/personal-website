@@ -37,7 +37,7 @@ export default function Home() {
         },
       });
 
-      /* Main navigation */
+      /* Navlink event listeners */
       document.querySelectorAll(".navLink").forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -90,8 +90,8 @@ export default function Home() {
           <Navbar clickHandler={navLinkHandler} />
           <Landing className={`panel ${styles.landing}`} />
           <Summary className={`panel ${styles.summary}`} />
-          <Projects className={`panel ${styles.projects}`} />
           <Contact className={`panel ${styles.contact}`} />
+          <Projects className={`panel ${styles.projects}`} />
           <Footer />
         </div>
       </main>

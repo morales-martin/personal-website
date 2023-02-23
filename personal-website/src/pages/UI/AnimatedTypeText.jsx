@@ -15,7 +15,7 @@ const AnimatedTypeText = ({ sequence }) => {
       style={{
         fontFamily: "Lora",
         color: "var(--ternary)",
-        fontSize: "2em",
+        fontSize: "xx-large",
         fontWeight: "bold",
       }}
     />

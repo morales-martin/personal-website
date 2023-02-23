@@ -24,6 +24,20 @@
 }
 
 .content {
-    margin-left: 0.5rem;
-    font-size: large;
+  margin-left: 0.5rem;
+  font-size: large;
+}
+
+.content a {
+  transition: 0.3s;
+}
+.content a:hover {
+  color: var(--ternary);
+}
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .container {
+    display: none;
+  }
 }

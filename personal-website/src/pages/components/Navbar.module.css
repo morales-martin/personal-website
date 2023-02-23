@@ -1,3 +1,111 @@
+.mobileWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--ternary);
+  width: 100vw;
+  height: 100vh;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-invert)
+    var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.nav {
+  z-index: 10;
+}
+
+.open {
+  transform: translateY(0);
+}
+
+.closed {
+  transform: translateY(-100%);
+}
+
+.mobileContainer {
+  display: flex;
+  margin-top: 7rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileNavLink {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.navWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 91.666667%;
+  z-index: 4;
+}
+
+.navContainer {
+  display: flex;
+  position: absolute;
+  left: 85vw;
+  top: 2rem;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.hamburgerBuns {
+  background-color: var(--secondary);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.hamburgerMeat {
+  background-color: var(--secondary);
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.rotateDown {
+  transform: translate(0, 0.625rem) rotate(45deg);
+}
+
+.rotateUp {
+  transform: translate(0, -0.625rem) rotate(-45deg);
+}
+
+.zeroWidth {
+  width: 0;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* ^ Full screen navbar */
+
 .navbarContainer {
   position: absolute;
   align-self: center;
@@ -13,12 +121,16 @@
 }
 
 .navbarLink {
-  font-size: large;
-  color: var(--secondary);
   margin: 1rem;
 }
 
-.navbarLink:hover {
+.navbarLink a {
+  font-size: large;
+  color: var(--secondary);
+  transition: 0.3s;
+}
+
+.navbarLink a:hover {
   color: var(--ternary);
   cursor: pointer;
 }
@@ -36,4 +148,25 @@
 
 .lineBottomSpace {
   flex: 1;
+}
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .navbarContainer {
+    display: none;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .nav {
+    display: none;
+  }
+}
+
+/* Large devices */
+@media (min-width: 1121px) {
+  .nav {
+    display: none;
+  }
 }

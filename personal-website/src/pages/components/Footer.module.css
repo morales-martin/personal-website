@@ -38,4 +38,16 @@
 
 .socialIcon svg {
   font-size: xx-large;
+  transition: 0.3s;
+}
+
+.socialIcon svg:hover {
+  color: var(--ternary);
+}
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .lineContainer {
+    display: none;
+  }
 }

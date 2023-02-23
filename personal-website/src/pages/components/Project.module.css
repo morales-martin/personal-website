@@ -1,14 +1,14 @@
 .projectContainer {
   position: relative;
   display: grid;
-  gap: 10px;
+  gap: 2rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
 }
 
 .content {
-  grid-area: 3 / 3 / 6 / 9;
+  grid-area: 3 / 3 / 6 / 12;
 }
 
 .header {
@@ -19,22 +19,22 @@
 
 .titles {
   font-weight: bold;
-  font-size: 44px;
+  font-size: 40px;
   color: var(--ternary);
 }
 
 .summary {
-  width: 30rem;
+  width: 70%;
   color: var(--secondary);
 }
 
 .projectImages {
-  grid-area: 6 / 6 / 12 / 12;
+  grid-area: 7 / 6 / 12 / 12;
   z-index: 2;
   position: relative;
 
   display: grid;
-  gap: 10px;
+  gap: 2rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
@@ -71,13 +71,66 @@
 
 .icon svg {
   margin: 1rem 1rem 0 0;
-  font-size:2rem;
+  font-size: 2rem;
   color: var(--secondary);
+  transition: 0.3s;
 }
 
 .icon svg:hover {
   color: var(--ternary);
 }
-/* .resumeButton {
-    margin-top: 1rem;
-  } */
+
+@media (min-width: 701px) and (max-width: 1120px) {
+  .titles {
+    font-size: 30px;
+  }
+
+  .header {
+    font-size: 40px;
+  }
+
+  .summary {
+    width: 100%;
+  }
+
+  .content {
+    grid-area: 3 / 3 / 6 / 12;
+  }
+
+  .mobileContainer {
+    grid-area: 4 / 9 / 10 / -1;
+  }
+}
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .titles {
+    font-size: 20px;
+  }
+
+  .header {
+    font-size: 30px;
+  }
+
+  .summary {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .projectContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectImages {
+    width: 50vw;
+  }
+
+  .mobileContainer {
+    grid-area: 1 / 7 / 8 / 11;
+  }
+
+  .desktopContainer {
+    grid-area: 1 / 1 / 8 / 12;
+  }
+}
