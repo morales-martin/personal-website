@@ -70,7 +70,8 @@ function Project({
               alt="desktop image"
               src={desktopImgUrl}
               fill
-              // placeholder="blur"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,|FOWyv%MDiM{VsRj%2ay-;~qjZWBj[ayj[f6j[of00WB-;of%MoMxuj[j[-;kCj[ayofayj[a{of00WB%Nofxvj[t7j[a|kCj[t7ayt7ayofayof00WBxvj[xuj[ozjta|IUj[xujtt7fQt7fQkB9Fayt7j[ozj[offQay"
             />
           </div>
         )}
@@ -80,7 +81,8 @@ function Project({
               alt="mobile image"
               src={mobileImgUrl}
               fill
-              // placeholder="blur"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,|5O|eB-;00ax00V@00Rj00%MV@%fofM{j]IUj[WB00WU~qju-;ju%Mju-;D%j[-;j@WBfPNFayof00WB_3j[-;j[%Mj[-;D%ju%gj[WCfQRjayof00WB_3ju-;j[%Mj[-;IUj[%Mf7ayfQWBfPkC00WB?bj@-;j[%Mj[%M"
             />
           </div>
         )}
