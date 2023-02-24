@@ -12,7 +12,7 @@ function Projects({ className }) {
       desktop: "/todo_desktop.png",
       mobile: "/todo_mobile.png",
       chips: [
-        "React.js",
+        "Next.js",
         "AWS AppSync",
         "AWS Amplify",
         "AWS DynamoDB",
