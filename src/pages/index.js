@@ -20,7 +20,7 @@ import ThemeChooser from "./components/ThemeChooser";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
-  const [width, setWidth] = useState(769);
+  const [width, setWidth] = useState(null);
   const size = useWindowSize();
   const container = useRef(null);
 
@@ -128,7 +128,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={`container ${styles.container}`} ref={container}>
           <Header />
-          {width > 700 && <ThemeChooser />}
+          {width && width > 700 && <ThemeChooser />}
           <Navbar clickHandler={navLinkHandler} />
           <Landing className={`panel ${styles.landing}`} />
           <Summary className={`panel ${styles.summary}`} />
