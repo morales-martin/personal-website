@@ -11,7 +11,7 @@ function MobileNav({ open, setOpen }) {
     >
       <div className={styles.mobileContainer} onClick={() => setOpen(!open)}>
         <a className={`navLink ${styles.mobileNavLink}`} href="#home">
-          <span className={styles.rotate}>Home</span>
+          Home
         </a>
         <a className={`navLink ${styles.mobileNavLink}`} href="#about">
           About
