@@ -9,7 +9,7 @@ function Landing({ className }) {
   return (
     <div id="home" className={`${className} ${styles.landingContainer}`}>
       <div className={styles.content}>
-        <div className={styles.header}>Hi. I'm Martin</div>
+        <div className={styles.header}>{`Hi. I'm Martin`}</div>
         <div className={styles.titles}>
           <AnimatedTypeText
             sequence={[
