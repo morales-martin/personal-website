@@ -55,4 +55,9 @@
     top: 2rem;
     left: 1rem;
   }
+
+  .content {
+    height: 2rem;
+  }
+
 }
