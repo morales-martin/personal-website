@@ -41,22 +41,26 @@ function Project({
           ))}
         </div>
         <div className={styles.links}>
-          <a
-            href={githubLink}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.icon}
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            href={prodLink}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.icon}
-          >
-            <LaunchIcon />
-          </a>
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.icon}
+            >
+              <GitHubIcon />
+            </a>
+          )}
+          {prodLink && (
+            <a
+              href={prodLink}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.icon}
+            >
+              <LaunchIcon />
+            </a>
+          )}
         </div>
       </div>
       <div className={styles.projectImages}>

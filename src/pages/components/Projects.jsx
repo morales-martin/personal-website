@@ -51,8 +51,7 @@ function Projects({ className }) {
       desktop: "/quickbnb_desktop.png",
       mobile: "",
       chips: ["React.js", "Emailjs", "Vercel", "REST API"],
-      githubLink: "https://github.com/morales-martin/Simple-Airbnb-Search",
-      prodLink: "https://simple-airbnb-search-wcxi.vercel.app/",
+      githubLink: "https://github.com/morales-martin/Simple-Airbnb-Search"
     },
   ]);
 
