@@ -54,6 +54,7 @@
   .container {
     top: 2rem;
     left: 1rem;
+    height: 2rem;
   }
 
   .content {
