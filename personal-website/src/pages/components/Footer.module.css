@@ -50,4 +50,9 @@
   .lineContainer {
     display: none;
   }
+
+  .container {
+    top: 2rem;
+    left: 1rem;
+  }
 }

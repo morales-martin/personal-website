@@ -11,7 +11,7 @@ function MobileNav({ open, setOpen }) {
     >
       <div className={styles.mobileContainer} onClick={() => setOpen(!open)}>
         <a className={`navLink ${styles.mobileNavLink}`} href="#home">
-          Home
+          <span className={styles.rotate}>Home</span>
         </a>
         <a className={`navLink ${styles.mobileNavLink}`} href="#about">
           About
@@ -61,18 +61,9 @@ function Navbar() {
         </div>
       </nav>
       <div className={styles.navbarContainer}>
-        <div className={styles.lineContainer}>
-          <div className={styles.line}></div>
-          <div className={styles.lineBottomSpace}></div>
-        </div>
         <div className={styles.navbarLink}>
-          <a className="navLink" href="#home">
-            Home
-          </a>
-        </div>
-        <div className={styles.navbarLink}>
-          <a className="navLink" href="#about">
-            About
+          <a className="navLink" href="#projects">
+            Projects
           </a>
         </div>
         <div className={styles.navbarLink}>
@@ -81,9 +72,18 @@ function Navbar() {
           </a>
         </div>
         <div className={styles.navbarLink}>
-          <a className="navLink" href="#projects">
-            Projects
+          <a className="navLink" href="#about">
+            About
           </a>
+        </div>
+        <div className={styles.navbarLink}>
+          <a className="navLink" href="#home">
+            Home
+          </a>
+        </div>
+        <div className={styles.lineContainer}>
+          <div className={styles.line}></div>
+          <div className={styles.lineBottomSpace}></div>
         </div>
       </div>
     </React.Fragment>

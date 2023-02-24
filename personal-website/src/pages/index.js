@@ -45,6 +45,7 @@ export default function Home() {
         trigger: container.current,
         pin: true,
         scrub: 1,
+        // snap: 1 / (sections.length - 1),
         end: () => "+=" + container.current.offsetWidth,
       });
 
@@ -64,7 +65,7 @@ export default function Home() {
               totalMovement = (sections.length - 1) * targetElem.offsetWidth;
             y = Math.round(
               horizontalScroll.start +
-                (targetElem.offsetLeft / totalMovement) * totalScroll
+                (targetElem.offsetLeft / totalMovement) * totalScroll - 1
             );
           }
           gsap.to(window, {

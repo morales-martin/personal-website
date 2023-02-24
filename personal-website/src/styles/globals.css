@@ -33,10 +33,9 @@ body {
 }
 html,
 body {
-  overflow-x: hidden;
+  overflow-x:visible;
   margin: 0;
   font-family: Lora;
-
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: var(--secondary) var(--primary); /* scroll thumb and track */
 }
