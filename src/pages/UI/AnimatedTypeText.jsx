@@ -4,7 +4,7 @@ const AnimatedTypeText = ({ sequence }) => {
   return (
     <TypeAnimation
       sequence={[
-        ...sequence,
+        ...sequence || [],
         () => {
           console.log("Done typing!"); // Place optional callbacks anywhere in the array
         },

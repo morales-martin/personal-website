@@ -26,9 +26,9 @@ function Landing({ className }) {
         </div>
         {/* <div className={styles.titles}>Full Stack Software Engineer</div> */}
         <div className={styles.summary}>
-          I’m a software engineer specializing in building exceptional digital
+          {`I’m a software engineer specializing in building exceptional digital
           products. Currently, I’m looking to contribute towards building
-          accessible, sustainable human-centered products with a new team.
+          accessible, sustainable human-centered products with a new team.`}
         </div>
         <div className={styles.resumeButton}>
           <Button
