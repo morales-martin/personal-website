@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100vw;
+  position: absolute;
+  z-index: 4;
+}
+
+.container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .wrapper {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: max-content;
+  }
+
+  .container {
+    position: static;
+    margin: auto;
+  }
+}

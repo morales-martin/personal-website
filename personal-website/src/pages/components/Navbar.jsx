@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+import ThemeChooser from "./ThemeChooser";
 
 function MobileNav({ open, setOpen }) {
   return (
@@ -21,6 +22,7 @@ function MobileNav({ open, setOpen }) {
         <a className={`navLink ${styles.mobileNavLink}`} href="#projects">
           Projects
         </a>
+        <ThemeChooser />
       </div>
     </div>
   );
@@ -29,9 +31,6 @@ function MobileNav({ open, setOpen }) {
 function Navbar() {
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    console.log("changed open");
-  }, [open]);
   return (
     <React.Fragment>
       <nav className={styles.nav}>

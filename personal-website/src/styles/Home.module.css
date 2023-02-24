@@ -27,6 +27,21 @@
   flex: 1;
 }
 
+.proxy {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+/* MOBILE  */
+@media (max-width: 700px) {
+  .themeWrapper {
+    margin-left: 20vw;
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
 /* 
 
 .code {

@@ -24,6 +24,7 @@ html {
   -webkit-overflow-scrolling: touch;
   background-color: var(--primary);
   font-family: Lora !important;
+  transition: 0.3s;
 }
 body {
   overflow-y: visible;
