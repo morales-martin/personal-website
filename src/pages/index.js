@@ -25,7 +25,7 @@ export default function Home() {
   const container = useRef(null);
 
   useEffect(() => {
-    setWidth(size.width);
+    setWidth(size[0]);
   }, [size]);
 
   useEffect(() => {

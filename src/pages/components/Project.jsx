@@ -15,7 +15,7 @@ const StyledChip = styled(Chip)(() => ({
 
 function Project({
   projectTitle,
-  roles,
+  roles = [],
   description,
   chips = [],
   className = "",
