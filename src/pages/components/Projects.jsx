@@ -5,7 +5,7 @@ import styles from "./Projects.module.css";
 function Projects({ className }) {
   const [projects, setProjects] = useState([
     {
-      title: "To Do - Task Manager",
+      title: "To Do - Advanced Task Manager",
       roles: ["Full Stack Engineer", "UI Designer"],
       description:
         "A 'Todo' web platform that provides users with a task management interface that allows for the creation, update, and deletion of tasks. Additional functions in this project include: task flags / category 'chips', task status filtering, user authentication, user-authenticated saved tasks, and real-time updates.",
