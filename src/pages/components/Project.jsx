@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Project.module.css";
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import { styled } from "@mui/system";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
