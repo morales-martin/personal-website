@@ -33,8 +33,8 @@ function Landing({ className }) {
         <div className={styles.resumeButton}>
           <Button
             text={"Check out my resume"}
-            href="/Martin Morales - Software Engineering Resume 2023.pdf"
-            download={true}
+            href="https://docs.google.com/document/d/14oBtmdTRu-UT-1fD-hZuls9lH8zFEq38/export?format=pdf"
+            download={false}
           />
         </div>
       </div>
