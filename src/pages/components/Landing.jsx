@@ -9,6 +9,7 @@ function Landing({ className }) {
   return (
     <div id="home" className={`${className} ${styles.landingContainer}`}>
       <div className={styles.content}>
+        <img className={styles.headshot} src="/headshot.jpg" />
         <div className={styles.header}>{`Hi. I'm Martin`}</div>
         <div className={styles.titles}>
           <AnimatedTypeText
