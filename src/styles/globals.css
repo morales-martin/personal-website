@@ -5,13 +5,13 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --primary: #dda15e;
-  --secondary: #fefae0;
-  --ternary: #bc6c25;
+  --primary: #9A8C98;
+  --secondary: #F2E9E4;
+  --ternary: #4A4E69;
 
-  --primary-rgb: 221, 161, 94;
-  --secondary-rgb: 254, 250, 224;
-  --ternary-rgb: 188, 108, 37;
+  --primary-rgb: 154, 140, 152;
+  --secondary-rgb: 242, 233, 228;
+  --ternary-rgb: 74, 78, 105;
 }
 
 /* @media (prefers-color-scheme: dark) {
