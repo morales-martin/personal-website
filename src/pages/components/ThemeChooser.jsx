@@ -5,7 +5,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 
 function ThemeChooser() {
-  const [selectedValue, setSelectedValue] = React.useState("brown");
+  const [selectedValue, setSelectedValue] = React.useState("purple");
 
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
