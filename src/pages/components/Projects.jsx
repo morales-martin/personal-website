@@ -20,8 +20,7 @@ function Projects({ className }) {
         "NextAuth.js",
         "MaterialUI",
       ],
-      githubLink: "https://github.com/morales-martin/todo-app",
-      prodLink: "https://todo-app-one-khaki.vercel.app/",
+      githubLink: "https://github.com/morales-martin/todo-app"
     },
     {
       title: "Chord Search",
@@ -39,9 +38,7 @@ function Projects({ className }) {
         "REST API",
         "Axios",
       ],
-      githubLink: "https://github.com/morales-martin/Chord-Search",
-      prodLink:
-        "http://chord-search-website.s3-website.us-east-2.amazonaws.com/",
+      githubLink: "https://github.com/morales-martin/Chord-Search"
     },
     {
       title: "Quickbnb",
